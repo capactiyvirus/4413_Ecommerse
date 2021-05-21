@@ -12,7 +12,7 @@
 
 [Building an App with Spring boot](https://spring.io/guides/gs/spring-boot/)
 
-[restAPI](https://app.swaggerhub.com/apis-docs/eecs4413/eecs4413/)
+[restAPI](https://app.swaggerhub.com/apis/eecs4413/bbc/prod)
 
 # Implementation
 
