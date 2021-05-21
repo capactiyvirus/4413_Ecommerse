@@ -1,0 +1,39 @@
+	<c:set var="displayXML" value="${xmlLink}" />
+
+	<c:choose>
+		<c:when test="${not empty displayXML}">
+		
+		<a href = "${xmlLink}"> XML Link</a>
+		
+		</c:when>
+		<c:otherwise>
+
+		</c:otherwise>
+	</c:choose>
+
+-------------------------------------------------------------
+context.setAttribute("xmlLink", "");
+-------------------------------------------------------------
+				File file = new File("sisXML.xml");
+			
+				  
+				//Create the file
+				if (file.createNewFile())
+				{
+				    System.out.println("File is created!");
+				} else {
+				    file.delete();
+				    file.createNewFile();
+				    System.out.println("File is created!");
+				}
+				 
+				System.out.println(file.getAbsolutePath());
+				System.out.println(file.getCanonicalPath());
+				context.setAttribute("xmlLink", file.getCanonicalPath());
+				
+				//Write Content
+				FileWriter writer = new FileWriter(file);
+				writer.write(xmlString);
+				writer.close();
+				
+				
